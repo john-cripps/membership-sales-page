@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Become an Official Cricket Widow Clubhouse Member | The Cricket Widow Club</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F5F5E8;
+    --cream-soft:#F9F9F0;
+    --sage:#95AF82;
+    --sage-dark:#748F62;
+    --sage-deep:#5E7A4E;
+    --ink:#032017;
+    --body:#475569;
+    --body-soft:#64748B;
+    --lavender:#B3A8ED;
+    --lavender-deep:#9284DD;
+    --yellow:#FFF47D;
+    --white:#FFFFFF;
+    --border:#CBD5E1;
+    --shadow:0 20px 45px -20px rgba(3,32,23,0.25);
+    --shadow-sm:0 10px 25px -12px rgba(3,32,23,0.18);
+    --radius-lg:28px;
+    --radius-md:20px;
+    --radius-sm:14px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background:var(--cream);
+    color:var(--body);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Playfair Display', serif;
+    color:var(--ink);
+    margin:0 0 16px;
+    line-height:1.15;
+    font-weight:700;
+  }
+  p{margin:0 0 16px;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:6px;
+    background:var(--lavender);
+    color:var(--ink);
+    font-weight:700;
+    font-size:12.5px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    padding:8px 18px;
+    border-radius:999px;
+    margin-bottom:18px;
+  }
+  .center{text-align:center;}
+  .section{padding:88px 0;}
+  .section-tight{padding:56px 0;}
+  .muted{color:var(--body-soft);}
+
+  /* ---------- HEADER ---------- */
+  header.site{
+    background:var(--sage);
+    padding:18px 0;
+    position:sticky;top:0;z-index:50;
+  }
+  header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+  .logo{
+    font-family:'Poppins',sans-serif;
+    font-weight:800;
+    letter-spacing:0.18em;
+    color:var(--ink);
+    line-height:1.25;
+    text-align:center;
+    font-size:13px;
+    text-transform:uppercase;
+  }
+  .logo .big{font-size:20px;display:block;}
+  .header-note{font-size:14.5px;color:var(--ink);font-weight:600;text-align:right;}
+  .header-note strong{font-weight:800;}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:76px 0 40px;}
+  .hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center;}
+  .hero h1{font-size:52px;}
+  .hero .lede{font-size:19px;color:var(--body);max-width:520px;}
+  .hero-photo{
+    position:relative;
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    aspect-ratio:1/1;
+  }
+  .hero-photo img{width:100%;height:100%;object-fit:cover;}
+  .perk-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:12px 20px;
+    margin:28px 0 34px;
+    max-width:560px;
+  }
+  .perk-column{display:flex;flex-direction:column;gap:12px;}
+  .perk-item{display:flex;align-items:flex-start;gap:10px;font-weight:600;color:var(--ink);font-size:15px;}
+  .perk-item .tick{
+    flex:0 0 20px;height:20px;border-radius:50%;
+    background:var(--sage);color:var(--white);
+    display:flex;align-items:center;justify-content:center;
+    font-size:12px;font-weight:800;margin-top:2px;
+  }
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    background:var(--sage);
+    color:var(--ink);
+    font-weight:800;
+    font-size:15.5px;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    padding:18px 30px;
+    border-radius:999px;
+    border:none;
+    cursor:pointer;
+    box-shadow:var(--shadow-sm);
+    transition:transform .15s ease, background .15s ease;
+  }
+  .btn:hover{background:var(--sage-dark);transform:translateY(-2px);}
+  .btn.dark{background:var(--ink);color:var(--cream);}
+  .btn.dark:hover{background:#06331f;}
+  .btn.outline{background:transparent;border:2px solid var(--ink);color:var(--ink);box-shadow:none;}
+  .btn.small{padding:11px 20px;font-size:13px;}
+
+  /* ---------- PARTNER STRIP ---------- */
+  .partners{padding:38px 0;}
+  .partners .label{text-align:center;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:var(--body-soft);font-weight:700;margin-bottom:22px;}
+  .partner-row{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;}
+  .partner-logo{
+    width:150px;height:64px;background:var(--white);border:1px dashed var(--border);
+    border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;
+    font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;
+    color:var(--body-soft);letter-spacing:0.04em;text-align:center;padding:8px;
+  }
+
+  /* ---------- INTRO ---------- */
+  .intro-card{
+    background:var(--white);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);
+    padding:56px;max-width:880px;margin:0 auto;text-align:center;
+  }
+  .intro-card h2{font-size:38px;}
+  .intro-card p{font-size:17.5px;max-width:680px;margin-left:auto;margin-right:auto;}
+
+  /* ---------- PRICING ---------- */
+  .pricing-section{background:var(--cream-soft);}
+  .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:52px;align-items:stretch;}
+  .tier-card{
+    background:var(--white);border-radius:var(--radius-lg);padding:38px 32px 32px;
+    box-shadow:var(--shadow-sm);display:flex;flex-direction:column;position:relative;border:2px solid transparent;
+  }
+  .tier-card.featured{border-color:var(--lavender-deep);box-shadow:var(--shadow);transform:translateY(-14px);}
+  .tier-card.vip{background:var(--ink);color:var(--cream);}
+  .tier-card.vip h3, .tier-card.vip .tier-price{color:var(--cream);}
+  .tier-card.vip .tier-desc{color:#B9CDBE;}
+  .tier-card.vip .tier-check{color:var(--sage);}
+  .tier-card.vip .tier-benefit{color:#E4ECE2;}
+  .ribbon{
+    position:absolute;top:-15px;left:50%;transform:translateX(-50%);
+    background:var(--lavender-deep);color:var(--white);font-size:12px;font-weight:800;
+    letter-spacing:0.08em;text-transform:uppercase;padding:7px 18px;border-radius:999px;box-shadow:var(--shadow-sm);
+  }
+  .tier-name{font-size:24px;margin-bottom:4px;}
+  .tier-price{font-family:'Playfair Display',serif;font-weight:800;font-size:38px;color:var(--ink);margin-bottom:2px;}
+  .tier-price span{font-family:'Poppins',sans-serif;font-size:15px;font-weight:600;color:var(--body-soft);}
+  .tier-desc{font-size:13.5px;color:var(--body-soft);margin-bottom:22px;min-height:20px;}
+  .tier-benefits{list-style:none;padding:0;margin:0 0 18px;flex:1;}
+  .tier-benefit{
+    display:flex;gap:10px;align-items:flex-start;font-size:14.5px;font-weight:500;color:var(--ink);
+    padding:9px 0;border-top:1px solid rgba(3,32,23,0.08);
+  }
+  .tier-card.vip .tier-benefit{border-top:1px solid rgba(245,245,232,0.14);}
+  .tier-benefit:first-child{border-top:none;}
+  .tier-check{color:var(--sage-deep);font-weight:800;flex:0 0 auto;}
+  .benefits-toggle{
+    display:flex;width:100%;align-items:center;justify-content:space-between;
+    margin:4px 0 16px;padding:13px 0;background:transparent;border:0;
+    border-top:1px solid rgba(3,32,23,0.1);border-bottom:1px solid rgba(3,32,23,0.1);
+    color:var(--ink);font:700 14px 'Poppins',sans-serif;cursor:pointer;text-align:left;
+  }
+  .benefits-toggle .arrow{font-size:18px;line-height:1;transition:transform .2s ease;}
+  .tier-card.vip .benefits-toggle{color:var(--cream);border-color:rgba(245,245,232,0.16);}
+  .premium-core,.premium-extra{flex:0 0 auto;}
+  .premium-core{margin-bottom:4px;}
+  .premium-extra{display:none;}
+  .tier-card.benefits-open .premium-extra{display:block;}
+  .tier-card.benefits-open .benefits-toggle .arrow{transform:rotate(180deg);}
+  .tier-card .btn{width:100%;justify-content:center;}
+  .tier-card.vip .btn{background:var(--sage);color:var(--ink);}
+  .raffle-link{display:inline-block;font-size:13px;font-weight:700;color:var(--sage-deep);margin-bottom:16px;text-decoration:underline;text-underline-offset:3px;}
+  .tier-card.vip .raffle-link{color:var(--sage);}
+
+  /* ---------- INFO TABS ---------- */
+  .tabs-intro{max-width:640px;margin:0 auto 30px;}
+  .tabs-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:32px;}
+  .tab-btn{
+    font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--ink);
+    background:var(--white);border:2px solid var(--border);padding:10px 20px;border-radius:999px;
+    cursor:pointer;transition:all .15s ease;
+  }
+  .tab-btn:hover{border-color:var(--sage);}
+  .tab-btn.active{background:var(--ink);border-color:var(--ink);color:var(--cream);}
+  .tab-btn.all-btn{background:var(--lavender);border-color:var(--lavender-deep);}
+  .tab-btn.all-btn.active{background:var(--lavender-deep);border-color:var(--lavender-deep);color:var(--white);}
+  .panel-card{
+    background:var(--white);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);
+    padding:12px 48px;max-width:900px;margin:0 auto;
+  }
+  .info-panel{display:none;padding:34px 0;}
+  .info-panel.active{display:block;}
+  .panel-card.show-all .info-panel{display:block;border-top:1px solid rgba(3,32,23,0.08);}
+  .panel-card.show-all .info-panel:first-child{border-top:none;}
+  .panel-grid{display:grid;grid-template-columns:56px 1fr;gap:22px;align-items:flex-start;}
+  .panel-icon{
+    width:56px;height:56px;border-radius:16px;background:var(--sage);
+    display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:var(--shadow-sm);
+  }
+  .info-panel h3{font-size:24px;margin-bottom:10px;}
+  .info-panel p{font-size:15.5px;}
+  .tier-tag{
+    display:inline-block;background:var(--lavender);color:var(--ink);font-size:11.5px;font-weight:800;
+    letter-spacing:0.05em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:12px;
+  }
+  .quote-box{
+    background:var(--cream-soft);border:1.5px dashed var(--sage);border-radius:var(--radius-md);
+    padding:20px 24px;margin:16px 0;font-style:italic;color:var(--ink);font-size:14.5px;
+  }
+
+  /* ---------- RAFFLE SECTION ---------- */
+  .raffle-section{background:var(--ink);color:var(--cream);}
+  .raffle-section .eyebrow{background:var(--yellow);}
+  .raffle-section h2{color:var(--cream);}
+  .raffle-section h3{color:var(--cream);}
+  .raffle-section .muted{color:#A9C1AF;}
+  .raffle-gallery{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:20px;margin:36px 0 10px;}
+  .raffle-photo{position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/3;}
+  .raffle-photo img{width:100%;height:100%;object-fit:cover;}
+  .value-ribbon{
+    position:absolute;top:16px;right:16px;background:var(--white);border:2px dashed var(--lavender-deep);
+    color:var(--ink);font-weight:800;font-size:12.5px;padding:9px 14px;border-radius:14px;
+    box-shadow:var(--shadow-sm);text-align:center;line-height:1.3;
+  }
+  .placeholder-img{
+    aspect-ratio:4/3;border:2px dashed rgba(245,245,232,0.35);border-radius:var(--radius-lg);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+    color:#A9C1AF;background:rgba(245,245,232,0.04);font-size:13px;font-weight:600;text-align:center;padding:16px;
+  }
+  .placeholder-img .icon{font-size:26px;}
+
+  .rank-track{display:flex;justify-content:space-between;align-items:flex-start;position:relative;margin:44px 0 10px;gap:6px;}
+  .rank-track::before{
+    content:'';position:absolute;top:26px;left:5%;right:5%;height:2px;
+    background:repeating-linear-gradient(to right,var(--sage) 0 10px,transparent 10px 18px);z-index:0;
+  }
+  .rank-node{position:relative;z-index:1;flex:1;text-align:center;padding:0 4px;}
+  .rank-circle{
+    width:52px;height:52px;border-radius:50%;background:var(--ink);border:3px solid var(--sage);
+    display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 10px;box-shadow:var(--shadow-sm);
+  }
+  .rank-node.top .rank-circle{background:var(--yellow);border-color:var(--yellow);}
+  .rank-months{font-size:11px;font-weight:700;color:var(--sage);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:2px;}
+  .rank-name{font-family:'Playfair Display',serif;font-weight:700;font-size:14.5px;color:var(--cream);margin-bottom:4px;}
+  .rank-desc{font-size:11.5px;color:#A9C1AF;line-height:1.4;}
+
+  .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:30px 0;}
+  .stat-card{background:rgba(245,245,232,0.06);border:1px solid rgba(245,245,232,0.15);border-radius:var(--radius-md);padding:26px 18px;text-align:center;}
+  .stat-card .tier{font-weight:700;font-size:12.5px;text-transform:uppercase;letter-spacing:0.05em;color:var(--sage);margin-bottom:8px;}
+  .stat-card .num{font-family:'Playfair Display',serif;font-weight:800;font-size:36px;color:var(--cream);}
+  .stat-card .note{font-size:12.5px;color:#A9C1AF;margin-top:6px;}
+  .stat-card.highlight{background:var(--yellow);border-color:var(--yellow);}
+  .stat-card.highlight .tier{color:#4A431F;}
+  .stat-card.highlight .num{color:var(--ink);}
+  .stat-card.highlight .note{color:#4A431F;}
+
+  .upsell-box{
+    background:var(--yellow);border-radius:var(--radius-md);padding:22px 26px;margin:26px 0;
+    display:flex;gap:14px;align-items:flex-start;font-weight:600;color:#4A431F;font-size:15px;
+  }
+  .upsell-box .emoji{font-size:22px;}
+
+  .ticket-table{
+    display:grid;grid-template-columns:repeat(4,1fr);background:rgba(245,245,232,0.06);
+    border:1px solid rgba(245,245,232,0.15);border-radius:var(--radius-md);overflow:hidden;margin:26px 0;
+  }
+  .ticket-table > div{padding:16px 14px;font-size:14px;text-align:center;border-bottom:1px solid rgba(245,245,232,0.12);color:var(--cream);}
+  .ticket-table .head{background:var(--sage);color:var(--ink);font-weight:700;font-size:12.5px;letter-spacing:0.04em;text-transform:uppercase;border-bottom:none;}
+  .ticket-table .row-label{font-weight:700;text-align:left;color:var(--cream);}
+
+  /* ---------- FINAL CTA ---------- */
+  .final-cta{background:var(--yellow);padding:80px 0;text-align:center;}
+  .final-cta h2{font-size:44px;max-width:760px;margin-left:auto;margin-right:auto;}
+  .final-cta p.lede{font-size:18px;max-width:600px;margin:0 auto 30px;color:#4A431F;}
+
+  /* ---------- FOOTER ---------- */
+  footer.site{background:var(--sage);padding:50px 0 34px;text-align:center;color:var(--ink);}
+  footer.site .word{font-family:'Playfair Display',serif;font-style:italic;font-weight:700;font-size:22px;margin-bottom:18px;}
+  footer.site nav{display:flex;justify-content:center;gap:26px;margin-bottom:18px;font-weight:600;font-size:14.5px;}
+  footer.site .fine{font-size:13px;color:#0A2A1B;opacity:0.75;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:960px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-photo{order:-1;max-width:420px;margin:0 auto;}
+    .pricing-grid{grid-template-columns:1fr;}
+    .tier-card.featured{transform:none;}
+    .panel-card{padding:8px 26px;}
+    .ticket-table{grid-template-columns:repeat(4,minmax(70px,1fr));font-size:12px;overflow-x:auto;}
+    .intro-card{padding:34px 24px;}
+    .raffle-gallery{grid-template-columns:1fr 1fr;}
+    .raffle-gallery .raffle-photo.main{grid-column:1/-1;}
+    .stat-row{grid-template-columns:1fr;}
+    header.site .wrap{flex-direction:column;text-align:center;}
+    .header-note{text-align:center;}
+  }
+  @media(max-width:640px){
+    .wrap{padding-left:20px;padding-right:20px;}
+    .section{padding:64px 0;}
+    .hero h1{font-size:36px;}
+    .perk-grid{grid-template-columns:1fr;gap:12px;}
+    .final-cta h2{font-size:30px;}
+    .intro-card h2{font-size:28px;}
+    .raffle-section h2{font-size:34px !important;}
+    .raffle-section h3{font-size:27px !important;}
+    .raffle-section .center > .muted{font-size:15px !important;}
+    .raffle-gallery{grid-template-columns:1fr;}
+    .raffle-photo,
+    .placeholder-img{border-radius:20px;}
+    .value-ribbon{top:12px;right:12px;max-width:145px;font-size:11px;padding:8px 10px;}
+    .rank-track{flex-direction:column;gap:12px;margin-top:32px;}
+    .rank-track::before{
+      display:block;top:28px;bottom:28px;left:27px;right:auto;width:2px;height:auto;
+      background:repeating-linear-gradient(to bottom,var(--sage) 0 9px,transparent 9px 16px);
+    }
+    .rank-node{
+      width:100%;display:grid;grid-template-columns:56px minmax(0,1fr);column-gap:16px;
+      align-items:center;text-align:left;padding:10px 14px 10px 0;
+      background:rgba(245,245,232,0.045);border:1px solid rgba(245,245,232,0.1);
+      border-radius:18px;
+    }
+    .rank-circle{grid-column:1;grid-row:1 / span 3;margin:0;justify-self:center;}
+    .rank-months,.rank-name,.rank-desc{grid-column:2;}
+    .rank-months{font-size:10.5px;align-self:end;}
+    .rank-name{font-size:17px;margin-bottom:2px;}
+    .rank-desc{font-size:12px;align-self:start;}
+    .stat-row{gap:12px;margin:24px 0;}
+    .stat-card{padding:20px 16px;}
+    .upsell-box{padding:18px;gap:10px;font-size:13.5px;line-height:1.55;}
+    .upsell-box .emoji{font-size:20px;}
+    .ticket-table{
+      grid-template-columns:28% repeat(3,24%);overflow:hidden;border-radius:16px;
+    }
+    .ticket-table > div{min-width:0;padding:13px 5px;font-size:12px;white-space:nowrap;}
+    .ticket-table .head{
+      display:flex;align-items:center;justify-content:center;
+      min-height:52px;padding:9px 3px;font-size:9px;line-height:1.15;white-space:normal;
+    }
+    .ticket-table .row-label{background:#0b2c22;padding-left:10px;}
+    .raffle-section .btn{width:100%;justify-content:center;padding-left:18px;padding-right:18px;}
+    .panel-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site">
+  <div class="wrap">
+    <div class="logo"><span class="big">THE</span>CRICKET WIDOW<br>CLUB</div>
+    <div class="header-note">Founding Member pricing — <strong>locked in for life.</strong></div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Official Clubhouse Membership</span>
+      <h1>Become An Official Cricket Widow Clubhouse Member</h1>
+      <p class="lede">Get immediate access to a range of exclusive perks and benefits made just for our cricket widow community — discounts for life, real-time access to me, and your best shot yet at that all-expenses-paid night away.</p>
+
+      <div class="perk-grid">
+        <div class="perk-column">
+          <div class="perk-item"><span class="tick">&#10003;</span> Lifetime discounts</div>
+          <div class="perk-item"><span class="tick">&#10003;</span> Early access</div>
+          <div class="perk-item"><span class="tick">&#10003;</span> Digital magazine</div>
+          <div class="perk-item"><span class="tick">&#10003;</span> Certificate, wristband &amp; ID</div>
+          <div class="perk-item"><span class="tick">&#10003;</span> Weekly group calls</div>
+        </div>
+        <div class="perk-column">
+          <div class="perk-item"><span class="tick">&#10003;</span> Exclusive invitations</div>
+          <div class="perk-item"><span class="tick">&#10003;</span> Monthly giveaways</div>
+          <div class="perk-item"><span class="tick">&#10003;</span> Exclusive content</div>
+          <div class="perk-item"><span class="tick">&#10003;</span> Private, real-time community</div>
+          <div class="perk-item"><span class="tick">&#10003;</span> And more&hellip;</div>
+        </div>
+      </div>
+
+      <a href="#pricing" class="btn">See Membership Tiers &#8594;</a>
+    </div>
+    <div class="hero-photo">
+      <img src="https://static.wixstatic.com/media/afde4d_cba7613c59b14bde8863c5f20961a2e9~mv2.jpg" alt="The Cricket Widow, founder of The Cricket Widow Club">
+    </div>
+  </div>
+</section>
+
+<!-- ================= PARTNER STRIP ================= -->
+<section class="partners">
+  <div class="wrap">
+    <div class="label">In Partnership With</div>
+    <div class="partner-row">
+      <div class="partner-logo">YOUR BRAND HERE</div>
+      <div class="partner-logo">YOUR BRAND HERE</div>
+      <div class="partner-logo">YOUR BRAND HERE</div>
+      <div class="partner-logo">YOUR BRAND HERE</div>
+      <div class="partner-logo">YOUR BRAND HERE</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHAT IS IT ================= -->
+<section class="section-tight">
+  <div class="wrap">
+    <div class="intro-card">
+      <span class="eyebrow">The Clubhouse</span>
+      <h2>What Is The Official Cricket Widow Clubhouse?</h2>
+      <p>This is a place for cricket widows across the country (and the world) to come together in a way that just isn't possible when we open the doors to everyone.</p>
+      <p>A private space for <em>real</em> cricket widows who live this life daily and want to share it with their peers&hellip; and, of course, with me too!</p>
+      <p>Because this group is so much more than another social media platform. It's an intimate, shared space where everyone can chat in real time — not just comment on a post and wait.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section class="section pricing-section" id="pricing">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Tiers &amp; Pricing</span>
+      <h2 style="font-size:42px;">Choose Your Membership</h2>
+      <p class="muted" style="max-width:640px;margin:0 auto;font-size:17px;">To give this community the time and effort it deserves (and to keep out the riff-raff), official membership starts from just £9.99 a month. The higher the tier, the better the benefits get.</p>
+    </div>
+
+    <div class="pricing-grid">
+
+      <!-- PREMIUM -->
+      <div class="tier-card">
+        <div class="tier-name">Premium</div>
+        <div class="tier-price">£9.99 <span>/ month</span></div>
+        <div class="tier-desc">Your official membership card into the Clubhouse.</div>
+        <ul class="tier-benefits premium-core">
+          <li class="tier-benefit"><span class="tier-check">&#10003;</span> 10% off Cricket Widow products &amp; merch for life — even if you cancel</li>
+          <li class="tier-benefit"><span class="tier-check">&#10003;</span> 10% off all partnered brands, now and in future</li>
+          <li class="tier-benefit"><span class="tier-check">&#10003;</span> Exclusive invitations to members-only in-person events</li>
+          <li class="tier-benefit"><span class="tier-check">&#10003;</span> Early access to the blog, podcast &amp; new product launches</li>
+        </ul>
+        <button class="benefits-toggle" type="button" aria-expanded="false" onclick="toggleTierBenefits(this)">
+          <span>View 5 more benefits</span><span class="arrow" aria-hidden="true">&#8964;</span>
+        </button>
+        <ul class="tier-benefits premium-extra">
+          <li class="tier-benefit"><span class="tier-check">&#10003;</span> "The Cricket Widow Survival Guide" — monthly digital magazine</li>
+          <li class="tier-benefit"><span class="tier-check">&#10003;</span> Premium-only content from me &amp; Tyler</li>
+          <li class="tier-benefit"><span class="tier-check">&#10003;</span> Official Cricket Widow Certificate, delivered to your door</li>
+          <li class="tier-benefit"><span class="tier-check">&#10003;</span> Your own Cricket Widow wristband with a unique membership number</li>
+          <li class="tier-benefit"><span class="tier-check">&#10003;</span> Entered into the monthly raffle for an all-expenses-paid night away</li>
+        </ul>
+        <a href="#raffle" class="raffle-link">See how the raffle works &#8594;</a>
+        <a href="#" class="btn outline">Join Premium</a>
+      </div>
+
+      <!-- ELITE -->
+      <div class="tier-card featured">
+        <div class="ribbon">Most Popular</div>
+        <div class="tier-name">Elite</div>
+        <div class="tier-price">£12.99 <span>/ month</span></div>
+        <div class="tier-desc">Everything in Premium, plus real face-time with me.</div>
+        <ul class="tier-benefits">
+          <li class="tier-benefit"><span class="tier-check">&#10003;</span> Absolutely everything included in Premium</li>
+          <li class="tier-benefit"><span class="tier-check">&#10003;</span> An extra 5% off merch — 15% off for life</li>
+          <li class="tier-benefit"><span class="tier-check">&#10003;</span> Private server access, exclusively for Elite members</li>
+          <li class="tier-benefit"><span class="tier-check">&#10003;</span> Weekly group video call with me &amp; other Elite members</li>
+          <li class="tier-benefit"><span class="tier-check">&#10003;</span> 10&times; more raffle tickets than Premium every single month</li>
+        </ul>
+        <a href="#raffle" class="raffle-link">See how the raffle works &#8594;</a>
+        <a href="#" class="btn">Join Elite</a>
+      </div>
+
+      <!-- VIP -->
+      <div class="tier-card vip">
+        <div class="tier-name">VIP</div>
+        <div class="tier-price">£19.99 <span>/ month</span></div>
+        <div class="tier-desc">The full Clubhouse experience — nothing held back.</div>
+        <ul class="tier-benefits">
+          <li class="tier-benefit"><span class="tier-check">&#10003;</span> Absolutely everything in Premium &amp; Elite</li>
+          <li class="tier-benefit"><span class="tier-check">&#10003;</span> Another 5% off merch — 20% off for life</li>
+          <li class="tier-benefit"><span class="tier-check">&#10003;</span> An additional weekly group call, just for VIP members</li>
+          <li class="tier-benefit"><span class="tier-check">&#10003;</span> Podcast invite opportunities — share your story &amp; get exposure</li>
+          <li class="tier-benefit"><span class="tier-check">&#10003;</span> 50&times; more raffle tickets than Premium every single month</li>
+        </ul>
+        <a href="#raffle" class="raffle-link">See how the raffle works &#8594;</a>
+        <a href="#" class="btn">Join VIP</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= INFO TABS ================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="center tabs-intro">
+      <span class="eyebrow">Still Deciding?</span>
+      <h2 style="font-size:36px;">Need More Information?</h2>
+      <p class="muted" style="font-size:16px;">Click whatever you've still got questions about and it'll appear right here — or hit "All Info" to see the lot in one go.</p>
+    </div>
+
+    <div class="tabs-bar" id="tabs-bar">
+      <button class="tab-btn all-btn" onclick="showPanel('all', this)">All Info</button>
+      <button class="tab-btn active" onclick="showPanel('discounts', this)">Discounts</button>
+      <button class="tab-btn" onclick="showPanel('events', this)">Events</button>
+      <button class="tab-btn" onclick="showPanel('early-access', this)">Early Access</button>
+      <button class="tab-btn" onclick="showPanel('survival-guide', this)">Survival Guide</button>
+      <button class="tab-btn" onclick="showPanel('premium-content', this)">Premium Content</button>
+      <button class="tab-btn" onclick="showPanel('certificate', this)">Certificate &amp; Wristband</button>
+      <button class="tab-btn" onclick="showPanel('private-server', this)">Private Server</button>
+      <button class="tab-btn" onclick="showPanel('group-calls', this)">Group Calls</button>
+    </div>
+
+    <div class="panel-card" id="panel-card">
+
+      <div class="info-panel active" id="panel-discounts">
+        <div class="panel-grid">
+          <div class="panel-icon">&#127873;</div>
+          <div>
+            <h3>Exclusive Members-Only Discounts</h3>
+            <p>Every member gets an exclusive 10% discount with our partnered brands, featured at the top of this page.</p>
+            <p>On top of that, your tier unlocks an exclusive discount on all Cricket Widow branded products and merchandise — from 10% off for Premium members, all the way up to 20% off for VIP members.</p>
+            <p><strong>And here's the best part:</strong> this discount keeps running even after you cancel your subscription. Once it's yours, it's yours.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-panel" id="panel-events">
+        <div class="panel-grid">
+          <div class="panel-icon">&#127942;</div>
+          <div>
+            <h3>Invitations To In-Person Events</h3>
+            <p>To help fund the in-person side of this community, I've made the decision to keep every in-person event members-only. It helps cover the cost of running them, and keeps numbers manageable enough that they actually feel intimate.</p>
+            <p>You'll be invited to game days, walks, marathons, networking meet-ups, and everything in between — and your membership covers your ticket.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-panel" id="panel-early-access">
+        <div class="panel-grid">
+          <div class="panel-icon">&#9200;</div>
+          <div>
+            <h3>Early Access To Everything</h3>
+            <p>Every Cricket Widow Club member gets early access to blog posts, product launches and podcast episodes before they go live to the public.</p>
+            <p>That also covers limited-edition merch, new products, and exclusive content before anyone else sees it.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-panel" id="panel-survival-guide">
+        <div class="panel-grid">
+          <div class="panel-icon">&#128218;</div>
+          <div>
+            <h3>The Cricket Widow Survival Guide</h3>
+            <p>Probably my favourite bonus of them all. The Survival Guide is exactly what it says on the tin — a digital monthly magazine made specifically for cricket widows, full of tips, tricks and stories to help you get through the season with a smile on your face.</p>
+            <p>Every issue also includes an honest look at how me and Tyler manage our relationship and keep things happy through even the busiest cricket seasons — so you can steal whatever works and skip the rest.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-panel" id="panel-premium-content">
+        <div class="panel-grid">
+          <div class="panel-icon">&#128274;</div>
+          <div>
+            <h3>Premium Content</h3>
+            <p>Exclusive content that I, quite frankly, don't want to post on Instagram.</p>
+            <p>It's just for you guys. And I'll leave it there&nbsp;<span style="font-style:italic;">;)</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-panel" id="panel-certificate">
+        <div class="panel-grid">
+          <div class="panel-icon">&#127894;</div>
+          <div>
+            <h3>Certificate &amp; Wristband</h3>
+            <p>Every Cricket Widow Club member gets an official Cricket Widow certificate and wristband, delivered straight to your door the moment you sign up.</p>
+            <p>Both come with your unique Cricket Widow membership number — the same number you can have embroidered onto any future merch, so it's truly, unmistakably yours.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-panel" id="panel-private-server">
+        <div class="panel-grid">
+          <div class="panel-icon">&#128172;</div>
+          <div>
+            <h3>Private Server</h3>
+            <p>Okay — I said the Survival Guide was the best bonus. I take it back.</p>
+            <p>By far, the most valuable thing I can give you is the exact reason I started this page in the first place: a community of women who <em>get it</em>.</p>
+            <p>So what makes our private server different from our Skool group? Skool is brilliant for posting your thoughts and sharing comments — but it's still a feed. You post something, and you wait for someone to reply.</p>
+            <div class="quote-box">Our private server doesn't work like that. It's a running conversation, not a noticeboard — more like a group chat than a comments section. I'm in there most days, so instead of posting a thought and waiting to see if anyone responds, you can just talk. To me, properly, whenever you need to. To the other cricket widows in real time, the second something happens — good or bad. No waiting for someone to see your post. No performing for a feed. Just a direct line into the community, exactly when you need it.</div>
+            <p>That's the whole point of this club. A place that's actually there for you, not just a place you post to.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-panel" id="panel-group-calls">
+        <div class="panel-grid">
+          <div class="panel-icon">&#128222;</div>
+          <div>
+            <h3>Weekly Group Calls</h3>
+            <span class="tier-tag">Elite &amp; VIP</span>
+            <p>For our Elite members, you'll get to come and have a coffee with me and the other Elites in a weekly group session, just for us. It's the perfect place to rant about the season, share tips, and just have fun with each other.</p>
+            <p>VIP members get all of that, plus an additional weekly call reserved just for VIP Cricket Widows — even more face-time, even more often.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= RAFFLE SECTION (standalone) ================= -->
+<section class="section raffle-section" id="raffle">
+  <div class="wrap">
+    <div class="center" style="max-width:720px;margin:0 auto 8px;">
+      <span class="eyebrow">The Monthly Giveaway</span>
+      <h2 style="font-size:44px;">Every Month, One Member Wins A Night Away On Us</h2>
+      <p class="muted" style="font-size:17.5px;">A fully-paid night at one of my favourite B&amp;Bs, champagne on ice when you arrive. Every member gets a ticket. What tier you're on — and how long you've stuck around — decides how many you're holding.</p>
+    </div>
+
+    <div class="raffle-gallery">
+      <div class="raffle-photo main">
+        <img src="https://static.wixstatic.com/media/afde4d_a1f27edb83ee427ebd1bc9c6558dcf61~mv2.jpg" alt="The prize: an all-expenses-paid night away">
+        <div class="value-ribbon">Estimated Value<br>[ADD PRIZE VALUE]</div>
+      </div>
+      <div class="placeholder-img"><span class="icon">&#128247;</span>Add a B&amp;B interior / room photo</div>
+      <div class="placeholder-img"><span class="icon">&#127942;</span>Add a past winner photo</div>
+    </div>
+
+    <!-- RANK LADDER -->
+    <h3 class="center" style="margin-top:60px;font-size:30px;">Rank Up Every Month You Stay</h3>
+    <p class="center muted" style="max-width:620px;margin:0 auto;">Your ticket count climbs every single month you're a member — these ranks are your bragging rights along the way. Screenshot your rank. Flex it in the group.</p>
+
+    <div class="rank-track">
+      <div class="rank-node">
+        <div class="rank-circle">&#127920;</div>
+        <div class="rank-months">Month 0&ndash;1</div>
+        <div class="rank-name">New Ball</div>
+        <div class="rank-desc">Fresh to the crease. Welcome to the Clubhouse.</div>
+      </div>
+      <div class="rank-node">
+        <div class="rank-circle">&#128587;</div>
+        <div class="rank-months">Month 2&ndash;3</div>
+        <div class="rank-name">Taking Guard</div>
+        <div class="rank-desc">You've found your feet (and your people).</div>
+      </div>
+      <div class="rank-node">
+        <div class="rank-circle">&#127919;</div>
+        <div class="rank-months">Month 4&ndash;6</div>
+        <div class="rank-name">Finding Your Rhythm</div>
+        <div class="rank-desc">Settled in. Tickets are stacking up.</div>
+      </div>
+      <div class="rank-node">
+        <div class="rank-circle">&#128293;</div>
+        <div class="rank-months">Month 7&ndash;11</div>
+        <div class="rank-name">Well Set</div>
+        <div class="rank-desc">You're not going anywhere. Neither are your odds.</div>
+      </div>
+      <div class="rank-node">
+        <div class="rank-circle">&#128175;</div>
+        <div class="rank-months">Month 12&ndash;23</div>
+        <div class="rank-name">Century Club</div>
+        <div class="rank-desc">A full year strong. Certified Clubhouse royalty.</div>
+      </div>
+      <div class="rank-node top">
+        <div class="rank-circle">&#128081;</div>
+        <div class="rank-months">Month 24+</div>
+        <div class="rank-name">Clubhouse Legend</div>
+        <div class="rank-desc">Maximum tickets. Maximum bragging rights.</div>
+      </div>
+    </div>
+
+    <!-- COMPARISON -->
+    <h3 class="center" style="margin-top:70px;font-size:30px;">Same Month. Very Different Odds.</h3>
+    <p class="center muted">Here's what 12 months of membership actually looks like, ticket-wise:</p>
+
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="tier">Premium</div>
+        <div class="num">13</div>
+        <div class="note">tickets after 12 months</div>
+      </div>
+      <div class="stat-card">
+        <div class="tier">Elite</div>
+        <div class="num">130</div>
+        <div class="note">10&times; more than Premium</div>
+      </div>
+      <div class="stat-card highlight">
+        <div class="tier">VIP</div>
+        <div class="num">650</div>
+        <div class="note">50&times; more than Premium</div>
+      </div>
+    </div>
+
+    <div class="upsell-box">
+      <span class="emoji">&#128161;</span>
+      <div>Already Premium? Upgrading to VIP doesn't just add tickets — it multiplies every ticket you earn from that month onwards by 50&times;. The earlier you upgrade, the bigger the gap between you and everyone still on Premium.</div>
+    </div>
+
+    <div class="ticket-table">
+      <div class="head">Tier</div><div class="head">Starting Tickets</div><div class="head">Extra Per Month</div><div class="head">After 12 Months</div>
+      <div class="row-label">Premium</div><div>1</div><div>+1</div><div>13</div>
+      <div class="row-label">Elite</div><div>10</div><div>+10</div><div>130</div>
+      <div class="row-label">VIP</div><div>50</div><div>+50</div><div>650</div>
+    </div>
+
+    <p class="muted" style="text-align:center;">And here's the best part: every month you stay a member, your chances of winning go up automatically. No entering, no remembering — just being here does it.</p>
+
+    <div class="center" style="margin-top:30px;">
+      <a href="#pricing" class="btn dark">Get Your First Ticket &#8594;</a>
+    </div>
+    <p class="center muted" style="font-size:12.5px;margin-top:16px;">Full raffle terms &amp; conditions, including how to enter for free with no purchase necessary, are available on request.</p>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Ready To Become An Official Member?</h2>
+    <p class="lede">Your spot in the Clubhouse is waiting — join today and lock in your Founding Member price for life.</p>
+    <a href="#pricing" class="btn dark">Choose Your Tier &#8594;</a>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site">
+  <div class="wrap">
+    <div class="word">The Cricket Widow Club.</div>
+    <nav>
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">Private Group</a>
+    </nav>
+    <p class="fine">&copy; 2026 The Cricket Widow Club. All rights reserved.</p>
+    <p class="fine">This isn't about blaming anyone — it's about supporting you.</p>
+  </div>
+</footer>
+
+<script>
+  function toggleTierBenefits(button){
+    var card = button.closest('.tier-card');
+    var isOpen = card.classList.toggle('benefits-open');
+    button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    button.querySelector('span:first-child').textContent = isOpen ? 'Hide extra benefits' : 'View 5 more benefits';
+  }
+
+  function showPanel(topic, btn){
+    document.querySelectorAll('#tabs-bar .tab-btn').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+    var card = document.getElementById('panel-card');
+    if(topic === 'all'){
+      card.classList.add('show-all');
+    } else {
+      card.classList.remove('show-all');
+      document.querySelectorAll('.info-panel').forEach(function(p){ p.classList.remove('active'); });
+      var target = document.getElementById('panel-' + topic);
+      if(target){ target.classList.add('active'); }
+    }
+  }
+</script>
+
+</body>
+</html>
