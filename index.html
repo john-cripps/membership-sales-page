@@ -277,22 +277,49 @@
     .waffle-story .card { min-height: 285px; padding: 30px; }
     .waffle-story .card h3 { font-size: 1.22rem; }
     .waffle-story .card p { font-size: 1rem; }
-    .not-webinar { background: var(--ink); color: var(--white); }
-    .not-webinar-grid { display: grid; grid-template-columns: .88fr 1.12fr; gap: clamp(35px, 7vw, 90px); align-items: center; }
-    .not-webinar h2 { color: var(--yellow); }
-    .quote {
-      padding: 34px;
-      border: 1px solid rgba(255,255,255,.25);
-      border-radius: 28px;
-      background: rgba(255,255,255,.08);
-      font-family: "Playfair Display", serif;
-      font-size: clamp(1.45rem, 3vw, 2.25rem);
-      font-style: italic;
-      line-height: 1.35;
+    .expect { overflow: hidden; background: var(--ink); color: var(--white); }
+    .expect-grid {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: clamp(42px, 7vw, 88px);
+      align-items: center;
     }
-    .ticks { display: grid; gap: 13px; margin-top: 27px; padding: 0; list-style: none; }
-    .ticks li { display: flex; gap: 12px; align-items: flex-start; }
-    .ticks li::before { content: "✓"; color: var(--yellow); font-weight: 900; }
+    .call-visual {
+      position: relative;
+      margin: 0;
+      padding: 11px;
+      border: 2px solid var(--white);
+      border-radius: 30px;
+      background: var(--white);
+      box-shadow: 11px 11px 0 var(--yellow);
+      transform: rotate(-1.2deg);
+    }
+    .call-visual img {
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+    .call-visual figcaption {
+      position: absolute;
+      right: 25px;
+      bottom: 25px;
+      padding: 9px 13px;
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      background: var(--yellow);
+      color: var(--ink);
+      font-size: .8rem;
+      font-weight: 800;
+      transform: rotate(1.5deg);
+    }
+    .expect-copy h2 { margin-bottom: 20px; color: var(--yellow); }
+    .expect-intro {
+      max-width: 610px;
+      margin-bottom: 0;
+      color: rgba(255,255,255,.86);
+      font-size: clamp(1.05rem, 1.7vw, 1.22rem);
+    }
 
     .signup { position: relative; overflow: hidden; }
     .signup-box {
@@ -328,11 +355,12 @@
 
     @media (max-width: 820px) {
       .hero { padding-top: 42px; }
-      .hero-grid, .not-webinar-grid, .signup-box, .faq { grid-template-columns: 1fr; }
+      .hero-grid, .expect-grid, .signup-box, .faq { grid-template-columns: 1fr; }
       .photo-card { justify-self: center; width: min(88%, 440px); margin-top: 12px; }
       .cards { grid-template-columns: 1fr; }
       .card:nth-child(2) { transform: none; }
       .signup-box { gap: 22px; }
+      .call-visual { order: 2; width: min(100%, 680px); margin-inline: auto; }
       .waffle-story { min-height: auto; padding-top: 360px; }
       .waffle-story .wrap { width: min(100% - 26px, 1160px); }
       .real-waffle { width: 570px; top: 18px; right: -185px; opacity: .94; }
@@ -357,6 +385,9 @@
       .waffle-story .card { min-height: auto; padding: 24px; }
       .signup-box { padding: 26px 18px; border-radius: 25px; box-shadow: 6px 6px 0 var(--ink); }
       .form-card { padding: 16px; }
+      .call-visual { padding: 7px; border-radius: 21px; box-shadow: 7px 7px 0 var(--yellow); }
+      .call-visual img { border-radius: 14px; }
+      .call-visual figcaption { right: 15px; bottom: 15px; }
       .footer-inner { align-items: flex-start; flex-direction: column; }
     }
     @media (prefers-reduced-motion: reduce) {
@@ -376,23 +407,23 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div>
-          <div class="eyebrow">☕ Free live get-together</div>
+          <div class="eyebrow">☕ A completely free online catch-up</div>
           <h1>Waffling <em>Wednesday</em></h1>
-          <p class="lede">A relaxed online catch-up for cricket widows who fancy a proper chat with women who <strong>actually get it.</strong></p>
+          <p class="lede">For every cricket widow who's ever heard <strong>“it'll only be a quick game”</strong>… and somehow lost the entire weekend. Come have a laugh, a little rant and a proper waffle with women who already get it.</p>
           <div class="hero-facts" aria-label="Event details">
             <span>Wednesday 30 September</span>
             <span>Live online</span>
             <span>Completely free</span>
           </div>
-          <a class="button" href="#join">Save me a spot →</a>
-          <p class="micro">No awkward presentation. No pressure to speak. Just come as you are.</p>
+          <a class="button" href="#join">Come have a waffle →</a>
+          <p class="micro">Camera on or off. Tea, wine or washing pile in the background. Nobody cares.</p>
         </div>
 
         <div class="photo-card" aria-label="The Cricket Widow">
           <div class="photo-frame">
             <img src="https://static.wixstatic.com/media/afde4d_cba7613c59b14bde8863c5f20961a2e9~mv2.jpg" alt="The Cricket Widow smiling">
           </div>
-          <div class="note">“Grab a cuppa (or something stronger) and come have a waffle with us.”</div>
+          <div class="note">“Grab a cuppa… or something stronger. I won't judge haha!”</div>
         </div>
       </div>
     </section>
@@ -402,42 +433,40 @@
       <div class="wrap">
         <div class="section-heading">
           <p class="kicker">What actually happens?</p>
-          <h2>Honestly? We have a waffle.</h2>
-          <p>I'll bring a few stories and questions to get us going, then we'll see where the conversation takes us. The funny bits, the lonely bits, the ridiculous things only another cricket widow would understand — all of it is welcome.</p>
+          <h2>Honestly? We just have a proper waffle.</h2>
+          <p>I'll bring a few stories and questions so nobody has to sit through that horrible awkward silence… then we'll see where the conversation takes us. The funny bits, the lonely bits and the ridiculous things only another cricket widow would understand — all of it is welcome.</p>
         </div>
         <div class="cards">
           <article class="card">
             <div class="icon">💬</div>
-            <h3>Real conversation</h3>
-            <p>Not comments on a post. A proper live chat where we can laugh, share stories and actually respond to each other.</p>
+            <h3>A proper conversation</h3>
+            <p>Not another post where you leave a comment and wait. A real-time chat where we can laugh, share stories and actually talk to each other.</p>
           </article>
           <article class="card">
             <div class="icon">🙋‍♀️</div>
-            <h3>People who understand</h3>
-            <p>No explaining why a “quick game” somehow swallowed the entire weekend. Everyone there already knows.</p>
+            <h3>No explaining required</h3>
+            <p>Everyone there already understands how one match becomes an entire day… and how “I'll be home soon” can mean absolutely anything.</p>
           </article>
           <article class="card">
             <div class="icon">🫖</div>
             <h3>Come exactly as you are</h3>
-            <p>Camera on or off. Talk loads or simply listen. Tea, wine, washing pile in the background — nobody cares.</p>
+            <p>Talk loads, say a little or quietly listen. There is no pressure to perform, introduce yourself perfectly or pretend you've got everything together.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section not-webinar">
-      <div class="wrap not-webinar-grid">
-        <div>
-          <p class="kicker" style="color: var(--sage)">Just so we're clear…</p>
-          <h2>This is not one of those webinars.</h2>
-          <ul class="ticks">
-            <li>No hour-long slideshow</li>
-            <li>No pretending everything is perfect</li>
-            <li>No being picked on if you don't want to speak</li>
-            <li>No charge — it is genuinely free</li>
-          </ul>
+    <section class="section expect">
+      <div class="wrap expect-grid">
+        <figure class="call-visual">
+          <img src="assets/waffling-wednesday-video-call.png" alt="A friendly Waffling Wednesday group video call with a place waiting for you">
+          <figcaption>There's a place for you ♡</figcaption>
+        </figure>
+        <div class="expect-copy">
+          <p class="kicker" style="color: var(--sage)">What you can expect</p>
+          <h2>Just come along and have a laugh.</h2>
+          <p class="expect-intro">You don't have to speak if you don't want to — camera on or off, it is completely up to you. It probably won't be a massive group either, so it should feel less like an online event and more like a proper relaxed catch-up where we can have fun and actually get to know each other.</p>
         </div>
-        <div class="quote">“It's basically the group chat we all needed… except we can hear each other laughing.”</div>
       </div>
     </section>
 
@@ -446,11 +475,11 @@
         <div class="signup-box">
           <div>
             <p class="kicker">Wednesday 30 September</p>
-            <h2>Fancy joining us?</h2>
-            <p>Pop your details in and I'll send the joining link and a little reminder before we start. That's it.</p>
+            <h2>Come and join us?</h2>
+            <p>Pop your details in and I'll send you the joining link, plus a little reminder before we start because… if you're anything like me, you'll need it haha!</p>
           </div>
           <div class="form-card">
-            <p><strong>Waffling Wednesday is completely free.</strong><br>Use the button below to save your place.</p>
+            <p><strong>Waffling Wednesday is completely free.</strong><br>Pop your email in below and your place is saved.</p>
             <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="62685a14-22ab-4724-8cd9-c9a059d7a149"></script>
             <small>You'll receive the live joining details by email.</small>
           </div>
@@ -467,19 +496,19 @@
         <div class="faq-list">
           <details open>
             <summary>Do I need to be a member?</summary>
-            <p>No. Waffling Wednesday is open to cricket widows whether you've been following for years or found me five minutes ago.</p>
+            <p>No! Whether you've followed me for years or found me five minutes ago, you're welcome.</p>
           </details>
           <details>
             <summary>Do I have to speak or turn my camera on?</summary>
-            <p>Not at all. Join in as much or as little as you like. Listening quietly is completely fine.</p>
+            <p>Not at all. Camera on, camera off, talk loads or simply listen — you can join in however feels comfortable.</p>
           </details>
           <details>
             <summary>Is it really free?</summary>
-            <p>Yes — completely free. You just need to save your spot so I can send you the joining details.</p>
+            <p>Yes, genuinely! No hidden charge and no card details. I just need your email so I can send you the joining link.</p>
           </details>
           <details>
             <summary>Is this just about moaning about cricket?</summary>
-            <p>No. This isn't about blaming anyone. It's about having a laugh, supporting each other and talking to women who understand the strange little world we live in.</p>
+            <p>No haha! This isn't about blaming anyone. It's about having a laugh, supporting each other and talking to women who understand the strange little world we live in.</p>
           </details>
         </div>
       </div>
