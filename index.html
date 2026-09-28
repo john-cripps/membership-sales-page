@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Join Liv and the Cricket Widow community for Waffling Wednesday — a completely free, fun online catch-up for every CW living with a cricket-obsessed partner.">
+  <meta name="description" content="Join Liv and the Cricket Widow community for Waffling Wednesday, a completely free and fun online catch-up for every CW who knows what it is like when cricket takes over.">
   <title>Waffling Wednesday | The Cricket Widow</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,15 +43,33 @@
       z-index: 5;
     }
     .brand {
-      display: inline-block;
-      font-family: "Barlow Condensed", sans-serif;
-      font-size: clamp(1.3rem, 2.5vw, 1.75rem);
-      font-weight: 900;
-      letter-spacing: -.02em;
-      line-height: .82;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Poppins", sans-serif;
+      font-size: clamp(1.15rem, 2.3vw, 1.55rem);
+      line-height: 1;
       text-transform: uppercase;
     }
-    .brand span { display: block; font-size: .52em; letter-spacing: .16em; margin-top: 7px; }
+    .brand-top {
+      margin-bottom: 6px;
+      font-size: .45em;
+      font-weight: 600;
+      letter-spacing: .08em;
+    }
+    .brand-main {
+      font-size: 1em;
+      font-weight: 800;
+      letter-spacing: -.045em;
+      white-space: nowrap;
+    }
+    .brand-bottom {
+      margin-top: 7px;
+      padding-left: .34em;
+      font-size: .43em;
+      font-weight: 700;
+      letter-spacing: .34em;
+    }
 
     .hero {
       position: relative;
@@ -349,6 +367,14 @@
       font-style: italic;
       font-weight: 700;
     }
+    .liv-quote cite {
+      display: block;
+      margin-top: 6px;
+      font-family: "Poppins", sans-serif;
+      font-size: .75em;
+      font-style: normal;
+      font-weight: 700;
+    }
     .expect-points {
       display: grid;
       gap: 11px;
@@ -397,7 +423,7 @@
     summary { cursor: pointer; font-weight: 800; list-style: none; }
     summary::-webkit-details-marker { display: none; }
     summary::after { content: "+"; float: right; font-size: 1.35rem; line-height: 1; }
-    details[open] summary::after { content: "–"; }
+    details[open] summary::after { content: "−"; }
     details p { margin: 14px 34px 0 0; font-size: .94rem; }
 
     footer { padding: 30px 0 42px; border-top: 1px solid var(--line); font-size: .83rem; }
@@ -450,7 +476,11 @@
 <body>
   <header class="topbar">
     <div class="wrap">
-      <div class="brand">The Cricket Widow <span>Club</span></div>
+      <div class="brand" aria-label="The Cricket Widow Club">
+        <span class="brand-top">The</span>
+        <span class="brand-main">Cricket Widow</span>
+        <span class="brand-bottom">Club</span>
+      </div>
     </div>
   </header>
 
@@ -460,9 +490,9 @@
         <div>
           <div class="eyebrow">🧇 A fun online catch-up</div>
           <h1>Waffling <em>Wednesday</em></h1>
-          <p class="lede">For every Cricket Widow who lives with a cricket-obsessed partner — come and have a laugh with our family of CWs!</p>
+          <p class="lede">For every Cricket Widow who knows what it’s like to have cricket take over... come and have a laugh with our CWs!</p>
           <div class="hero-facts" aria-label="Event details">
-            <span>Wednesday 30 September</span>
+            <span>Wednesday 30 September, 6pm</span>
             <span>Live online</span>
             <span>Completely free</span>
             <span>Super fun!</span>
@@ -475,7 +505,7 @@
           <div class="photo-frame">
             <img src="https://static.wixstatic.com/media/afde4d_cba7613c59b14bde8863c5f20961a2e9~mv2.jpg" alt="The Cricket Widow smiling">
           </div>
-          <div class="note">“I’ve got a story I’ve never told anyone before… and it is so embarrassing!”</div>
+          <div class="note">“I’ve never done a proper ask-me-anything before... so this is your chance.”</div>
         </div>
       </div>
     </section>
@@ -486,23 +516,23 @@
         <div class="section-heading">
           <p class="kicker">What’s happening?</p>
           <h2>Come and have a proper laugh with Liv and the CWs!</h2>
-          <p>Come meet Liv face to face and hear her stories of how she survived cricket season. Have a laugh with Liv and the other CWs, swap stories, ask your questions and hear one spectacularly embarrassing story she has never been brave enough to tell anyone… until Wednesday.</p>
+          <p>Come and meet Liv live, ask her the questions you have always wanted to ask and have a proper chat with the other CWs. Bring your own stories, get everyone’s take and have a laugh with people who get it.</p>
         </div>
         <div class="cards">
           <article class="card">
             <div class="icon">🍷</div>
-            <h3>Your turn to spill</h3>
-            <p>Liv cannot be the only CW with a ridiculous story! This is your chance to tell us your funniest moments or any gossip we need to hear!</p>
+            <h3>Your turn to waffle</h3>
+            <p>Bring your stories too. Ask questions, tell us what’s happened in your cricket world, get everyone’s take and have a proper laugh with people who get it.</p>
           </article>
           <article class="card">
-            <div class="icon">🤫</div>
-            <h3>Yes, <em>that</em> embarrassing story</h3>
-            <p>There is one wild story Liv has been far too embarrassed to tell anyone. She has never posted it or told the community. On Wednesday, she is finally saying it out loud!</p>
+            <div class="icon">👀</div>
+            <h3>Nothing’s off the table</h3>
+            <p>Cricket. Tyler. Building The Cricket Widow Club. The things Liv has learnt the hard way, what has gone wrong and what she would do differently. Ask what you actually want to know and have a proper chat about it.</p>
           </article>
           <article class="card">
             <div class="icon">👋</div>
             <h3>Liv, completely unfiltered</h3>
-            <p>Meet Liv live for the tips and little secrets that get her through every cricket season — things she has learnt the hard way and honest answers she cannot fit into a Reel.</p>
+            <p>No edited Reel, no 30-second answer. Just a proper conversation and honest answers to the questions you actually want to ask.</p>
           </article>
         </div>
       </div>
@@ -517,11 +547,11 @@
         <div class="expect-copy">
           <p class="kicker" style="color: var(--sage)">Your Wednesday night plans</p>
           <h2>A proper catch-up with people who get it.</h2>
-          <p class="expect-intro">It probably won’t be a huge call — which makes it even better! We can actually chat, laugh, hear everyone’s stories and get to know each other properly.</p>
-          <blockquote class="liv-quote">“It’s just going to be the best!! I can’t wait!” — Liv</blockquote>
+          <p class="expect-intro">It probably won’t be a huge call, which makes it even better! We can actually chat, laugh, hear everyone’s stories and get to know each other properly.</p>
+          <blockquote class="liv-quote">“It’s just going to be the best!! I can’t wait!”<cite>Liv</cite></blockquote>
           <ul class="expect-points">
-            <li>💛 Meet Liv and other Cricket Widows face to face</li>
-            <li>😂 Hear the stories and tips Liv has never shared online</li>
+            <li>💛 Meet Liv and other Cricket Widows properly</li>
+            <li>😂 Ask Liv the questions you have always wanted answered</li>
             <li>🍷 Bring a coffee, wine or whatever takes your fancy!</li>
           </ul>
           <a class="button" href="#join">Come have a waffle →</a>
@@ -533,8 +563,8 @@
       <div class="wrap">
         <div class="signup-box">
           <div>
-            <p class="kicker">Wednesday 30 September</p>
-            <h2>Right then—are you coming?</h2>
+            <p class="kicker">Wednesday 30 September, 6pm</p>
+            <h2>Right then, are you coming?</h2>
             <p>Pop your email in and we’ll send you everything you need to join us. Then grab your favourite drink, get comfy and get ready for a really fun Wednesday night!</p>
           </div>
           <div class="form-card">
@@ -559,7 +589,7 @@
           </details>
           <details>
             <summary>Do I have to speak or turn my camera on?</summary>
-            <p>No. Join in as much—or as little—as you like. Camera on or off is completely your choice.</p>
+            <p>No. Join in as much or as little as you like. Camera on or off is completely your choice.</p>
           </details>
           <details>
             <summary>Where is Waffling Wednesday happening?</summary>
@@ -576,10 +606,13 @@
 
   <footer>
     <div class="wrap footer-inner">
-      <div class="brand">The Cricket Widow <span>Club</span></div>
+      <div class="brand" aria-label="The Cricket Widow Club">
+        <span class="brand-top">The</span>
+        <span class="brand-main">Cricket Widow</span>
+        <span class="brand-bottom">Club</span>
+      </div>
       <div>© 2026 The Cricket Widow Club. All rights reserved.</div>
     </div>
   </footer>
 </body>
 </html>
-
