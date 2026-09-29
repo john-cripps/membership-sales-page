@@ -70,6 +70,11 @@
       font-weight: 700;
       letter-spacing: .34em;
     }
+    .brand-logo {
+      width: clamp(145px, 18vw, 190px);
+      height: auto;
+      object-fit: contain;
+    }
 
     .hero {
       position: relative;
@@ -476,11 +481,11 @@
 <body>
   <header class="topbar">
     <div class="wrap">
-      <div class="brand" aria-label="The Cricket Widow Club">
-        <span class="brand-top">The</span>
-        <span class="brand-main">Cricket Widow</span>
-        <span class="brand-bottom">Club</span>
-      </div>
+      <img
+        class="brand-logo"
+        src="https://static.wixstatic.com/media/af3f44_e9edd6250a784a23948b8c4ef3e55b0b~mv2.jpeg"
+        alt="The Cricket Widow Club"
+      >
     </div>
   </header>
 
@@ -503,7 +508,7 @@
 
         <div class="photo-card" aria-label="The Cricket Widow">
           <div class="photo-frame">
-            <img src="https://static.wixstatic.com/media/af3f44_40e7039e40bf4c818437012e2c68f621~mv2.jpeg" alt="The Cricket Widow smiling">
+            <img src="https://static.wixstatic.com/media/af3f44_e219ca5eedbe4c04b4afad26141411f1~mv2.jpeg" alt="The Cricket Widow smiling">
           </div>
           <div class="note">“I’ve never done a proper ask-me-anything before... so this is your chance.”</div>
         </div>
@@ -541,7 +546,7 @@
     <section class="section expect">
       <div class="wrap expect-grid">
         <figure class="call-visual">
-          <img src="https://res.cloudinary.com/drvvpzp6m/image/upload/v1790106769/asasdsaadasdsa_ms9kv8.png" alt="A friendly Waffling Wednesday group video call with a place waiting for you">
+          <img src="assets/waffling-wednesday/laptop-call-liv-v2.png" alt="Liv smiling on a friendly Waffling Wednesday group video call with a place waiting for you">
           <figcaption>Come and join us! 🧇</figcaption>
         </figure>
         <div class="expect-copy">
